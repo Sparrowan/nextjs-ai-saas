@@ -3,6 +3,12 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import React from 'react'
+import { Montserrat } from 'next/font/google'
+import {cn} from '@/lib/utils'
+
+const montserrat = Montserrat({
+    weight: "600", subsets: ["latin"]
+})
 
 const Sidebar = () => {
     return (
@@ -16,7 +22,7 @@ const Sidebar = () => {
                             alt='logo'
                         />
                     </div>
-                    <h1 className="text-2xl font-bold">
+                    <h1 className={cn("text-2xl font-bold", montserrat.className)}>
                         Genius
                     </h1>
                 </Link>
